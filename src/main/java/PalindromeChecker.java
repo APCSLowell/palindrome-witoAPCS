@@ -38,7 +38,9 @@ public void tester()
 public boolean palindrome(String word)
 {
 
- if(reverse(word).equals(word)) return true;  
+  if(reverse(word).equals(word)) return true;  
+  if(reverse(normalize(word)).equals(word)) return true; 
+  
   return false;    
 }
 public String reverse(String str)
@@ -72,6 +74,7 @@ public String onlyLetters(String sString){
 return balls; 
 }
 
-  
+public String normalize(String amongus){
+  return(noSpaces(onlyLetters(noCapitals(amongus))));
   
 }
