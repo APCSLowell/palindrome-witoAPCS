@@ -41,8 +41,12 @@ public boolean palindrome(String word)
   balls = noCapitals(balls);
   balls = onlyLetters(balls);
   balls = reverse(balls); 
+
+  String temp = reverse(onlyLetters(noCapitals(noSpaces(word))));
   
- if(balls.equals(word)) return true;
+
+  
+ if(balls.equals(temp)) return true;
   return false;  
  
 }
