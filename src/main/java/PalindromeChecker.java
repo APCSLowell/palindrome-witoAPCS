@@ -37,7 +37,11 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  String balls = reverse(word); 
+  String balls = noSpaces(word);
+  balls = noCapitals(balls);
+  balls = onlyLetters(balls);
+  balls = reverse(balls); 
+  
  if(balls.equals(word)) return true;
   return false;  
  
@@ -50,4 +54,29 @@ public String reverse(String str)
   }
     return sNew;
 }
+
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
+
+public String noSpaces(String sWord){
+  String balls = "";
+  //find positions
+  for(int i = 0; i < sWord.length(); i++){
+    if(!sWord.substring(i,i+1).equals(" ")) balls = balls + sWord.substring(i,i+1); 
+  }
+  return balls; 
+  //remove positions from string????????
+}
+
+public String onlyLetters(String sString){
+  String balls = "";
+  for(int i = 0; i < sString.length(); i++){
+    if(Character.isLetter(sString.charAt(i))) balls = balls + sString.substring(i,i+1); 
+  }
+return balls; 
+}
+
+  
+  
 }
