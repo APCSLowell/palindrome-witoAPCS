@@ -47,8 +47,10 @@ public boolean palindrome(String word)
 
   
  if(balls.equals(temp)) return true;
+ if(reverse(word).equals(word)) return true;  
   return false;  
- 
+
+  
 }
 public String reverse(String str)
 {
