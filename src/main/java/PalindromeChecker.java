@@ -37,20 +37,9 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  String balls = noSpaces(word);
-  balls = noCapitals(balls);
-  balls = onlyLetters(balls);
-  balls = reverse(balls); 
 
-  String temp = reverse(onlyLetters(noCapitals(noSpaces(word))));
-  
-
-  
- if(balls.equals(temp)) return true;
  if(reverse(word).equals(word)) return true;  
-  return false;  
-
-  
+  return false;    
 }
 public String reverse(String str)
 {
