@@ -39,6 +39,7 @@ public boolean palindrome(String str){
    String balls = noSpaces(onlyLetters(noCapitals(str)));
    String string = reverse(balls);
    if(balls.equals(string)) return true;
+  return false; 
 }
   
 public String reverse(String sWord){
