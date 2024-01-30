@@ -35,14 +35,10 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String sWord){
-   String balls = "";
-  for(int i = sWord.length(); i > 0; i--){
-    balls = balls + sWord.substring(i-1,i);
-  }  
-  
- if(balls.equals(sWord)) return true;
-  return false; 
+public boolean palindrome(String str){
+   String balls = noSpaces(onlyLetters(noCapitals(str)));
+   String string = reverse(balls);
+   if(balls.equals(string) return true;
 }
   
 public String reverse(String sWord){
@@ -53,5 +49,29 @@ public String reverse(String sWord){
   return balls;
 }
 
+public String onlyLetters(String sString){
+  String balls = "";
+  for(int i = 0; i < sString.length(); i++){
+    if(Character.isLetter(sString.charAt(i))) balls = balls + sString.substring(i,i+1); 
+  }
+return balls; 
+}
+
+public String noSpaces(String sWord){
+  String balls = "";
+  //find positions
+  for(int i = 0; i < sWord.length(); i++){
+    if(!sWord.substring(i,i+1).equals(" ")) balls = balls + sWord.substring(i,i+1); 
+  }
+  return balls; 
+  //remove positions from string????????
+}
+
+public String noCapitals(String sWord){
+  return sWord.toLowerCase();
+}
+  
+  
+  
 
 }
