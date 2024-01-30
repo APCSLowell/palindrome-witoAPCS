@@ -76,5 +76,6 @@ return balls;
 
 public String normalize(String amongus){
   return(noSpaces(onlyLetters(noCapitals(amongus))));
-  
+
+}
 }
